@@ -1,23 +1,13 @@
 body {
-    /* max-width: 80rem; */
     margin: 0;
     padding: 0;
     background: #e4f9f6;
-}
-
-.header {
-    /* width: 100%;
-    height: 10vh; */
-    /* background: #8ce4da; */
 }
 
 .wrapper-slide {
     width: 50vw;
     padding: 3vh;
     margin: 0 auto;
-    /* margin-top: 10vh;
-    margin-left: auto;
-    margin-right: auto; */
     overflow: hidden;
     border: dotted 1vw #2faea3;
     height: auto;
@@ -46,7 +36,6 @@ margin-bottom: 2vh;
 img {
     object-fit: cover;
     width: 90%;
-    
 }
 
 #slide-one:checked ~ .mems .slides {
@@ -116,10 +105,6 @@ label:active .label-btn {
 }
 
 .wrapper-text {
-/* width: 10vw; */
-/* display: flex; */
-/* font-size: 2.2em; */
-
 height: 5vh;
 overflow: hidden;
 }
@@ -133,7 +118,6 @@ overflow: hidden;
     align-items: center;
     font-size: 1.5rem;
     font-weight: bold;
-    /* transform: translateY(0%) */
 }
 
 #slide-one:checked ~ .text-controls .wrapper-text .text {
@@ -154,4 +138,38 @@ overflow: hidden;
 
 #slide-five:checked ~ .text-controls .wrapper-text .text {
     transform: translateY(-400%)
+}
+
+@media (max-width: 869px) {
+    .text {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .wrapper-slide {
+        padding: 1vh;
+    }
+    .text-controls {
+        flex-direction: column-reverse;
+    }
+
+    .wrapper-text {
+        align-self: flex-start;
+    }
+
+    .wrapper-controls label {
+        height: 3vh;
+    }
+
+    .label-btn {
+        height: 1vh;
+    }
+
+}
+
+@media (max-width: 375px) {
+    .text {
+        font-size: 0.9rem;
+    }
 }
