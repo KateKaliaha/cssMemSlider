@@ -1,0 +1,157 @@
+body {
+    /* max-width: 80rem; */
+    margin: 0;
+    padding: 0;
+    background: #e4f9f6;
+}
+
+.header {
+    /* width: 100%;
+    height: 10vh; */
+    /* background: #8ce4da; */
+}
+
+.wrapper-slide {
+    width: 50vw;
+    padding: 3vh;
+    margin: 0 auto;
+    /* margin-top: 10vh;
+    margin-left: auto;
+    margin-right: auto; */
+    overflow: hidden;
+    border: dotted 1vw #2faea3;
+    height: auto;
+}
+
+input {
+    display: none;
+}
+
+.mems {
+display: flex;
+width: 300vw;
+margin-bottom: 2vh;
+}
+
+.slides {
+    width: 50vw;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.7s ease-in-out;
+    margin-right: 1%;
+}
+
+img {
+    object-fit: cover;
+    width: 90%;
+    
+}
+
+#slide-one:checked ~ .mems .slides {
+    transform: translateX(0%)
+}
+
+#slide-two:checked ~ .mems .slides {    
+    transform: translateX(-106%)
+}
+
+#slide-three:checked ~ .mems .slides {
+    transform: translateX(-211.5%)
+}
+
+#slide-four:checked ~ .mems .slides {
+    transform: translateX(-317%)
+}
+
+#slide-five:checked ~ .mems .slides {
+    transform: translateX(-423%)
+}
+
+#slide-one:checked ~ .text-controls .wrapper-controls label:nth-child(1) .label-btn,
+#slide-two:checked ~ .text-controls .wrapper-controls label:nth-child(2) .label-btn,
+#slide-three:checked ~ .text-controls .wrapper-controls label:nth-child(3) .label-btn,
+#slide-four:checked ~ .text-controls .wrapper-controls label:nth-child(4) .label-btn,
+#slide-five:checked ~ .text-controls .wrapper-controls label:nth-child(5) .label-btn {
+    background: transparent;
+    border: solid 0.5vw #26655f;
+}
+
+.text-controls {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.wrapper-controls {
+    display: flex;
+    justify-content: space-between;
+}
+
+.wrapper-controls label {
+	width: 3vw;
+	height: 5vh;
+	display: flex;
+	cursor: pointer;
+}
+
+.label-btn {
+    width: 1vw;
+	height: 2.19999999vh;
+	border-radius: 50%;
+    margin-right: 10%;
+	background-color: #26655f;
+    border: solid 0.5vw #26655f;
+}
+
+label:hover .label-btn {
+    background-color: #1e433f;
+    border: solid 0.5vw #1e433f;
+} 
+
+label:active .label-btn {
+    transform: scale(0.75);
+   background: transparent;
+}
+
+.wrapper-text {
+/* width: 10vw; */
+/* display: flex; */
+/* font-size: 2.2em; */
+
+height: 5vh;
+overflow: hidden;
+}
+
+.text {
+    height: 5vh;
+    display: flex;
+    flex-wrap: nowrap;
+    width: auto;
+    transition: all 0.7s ease-in-out;
+    align-items: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    /* transform: translateY(0%) */
+}
+
+#slide-one:checked ~ .text-controls .wrapper-text .text {
+    transform: translateY(0%)
+}
+
+#slide-two:checked ~ .text-controls .wrapper-text .text {
+    transform: translateY(-100%)
+}
+
+#slide-three:checked ~ .text-controls .wrapper-text .text {
+    transform: translateY(-200%)
+}
+
+#slide-four:checked ~ .text-controls .wrapper-text .text {
+    transform: translateY(-300%)
+}
+
+#slide-five:checked ~ .text-controls .wrapper-text .text {
+    transform: translateY(-400%)
+}
