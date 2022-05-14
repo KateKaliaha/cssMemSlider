@@ -23,21 +23,24 @@ input {
 display: flex;
 width: 300vw;
 margin-bottom: 2vh;
+max-height: 28rem;
 }
 
 .slides {
     width: 50vw;
-    height: auto;
+    /* height: auto; */
     display: flex;
     justify-content: center;
     align-items: center;
     transition: all 0.7s ease-in-out;
     margin-right: 1%;
+    max-height: 28rem;
 }
 
 img {
     object-fit: cover;
-    width: 90%;
+    /* width: 50%; */
+    max-height: 28rem;
 }
 
 #slide-one:checked ~ .mems .slides {
@@ -142,12 +145,37 @@ overflow: hidden;
     transform: translateY(-400%)
 }
 
-@media (max-width: 869px) {
+@media (max-width: 900px) {
+    .wrapper-slide {
+        padding: 1vh;
+    }
+    /* .slides {
+        margin-right: 0.99%;
+    }
+    .img {
+        width: 100%;
+    } */
     .text {
         font-size: 1rem;
     }
 }
-
+@media (max-width: 860px) {
+    /* .slides {
+        margin-right: 1.1%;
+    } */
+    .wrapper-slide {
+        width: 80vw;
+    }
+    .mems {
+        width: 420vw;
+    }
+    .slides {
+        width: 80vw;
+    }
+    .img {
+        width: 80%;
+    }
+}
 @media (max-width: 768px) {
     .wrapper-slide {
         padding: 1vh;
@@ -168,9 +196,9 @@ overflow: hidden;
     .label-btn {
         height: 1vh;
     }
-    img {
+    /* img {
         width: 100%;
-    }
+    } */
 }
 
 @media (max-width: 580px) {
@@ -178,15 +206,49 @@ overflow: hidden;
         width: 80vw;
     }
     .mems {
-        width: 420vw;
+        width: 400vw;
     }
     .slides {
         width: 80vw;
     }
+    /* .img {
+        width: 40%;
+    } */
+}
+
+@media (max-width: 530px) {
+    .wrapper-slide {
+        width: 85vw;
+    }
+    .mems {
+        width: 425vw;
+    }
+    .slides {
+        width: 85vw;
+    }
+     .slides img {
+        width: 95%;
+    }
 }
 @media (max-width: 375px) {
-  
+    .wrapper-slide {
+        width: 79vw;
+    }
+    .mems {
+        width: 420vw;
+    }
+    .slides {
+        width: 90vw;
+    }
+    /* .slides img {
+        width: 100%;
+    } */
+
     .text {
         font-size: 0.9rem;
+    }
+    .label-btn {
+        height: 1.5vh;
+        width: 2vh;
     }
 }
