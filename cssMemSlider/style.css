@@ -150,6 +150,7 @@ overflow: hidden;
     .wrapper-slide {
         padding: 1vh;
     }
+    
     .text-controls {
         flex-direction: column-reverse;
     }
@@ -165,10 +166,24 @@ overflow: hidden;
     .label-btn {
         height: 1vh;
     }
-
+    img {
+        width: 100%;
+    }
 }
 
+@media (max-width: 580px) {
+    .wrapper-slide {
+        width: 80vw;
+    }
+    .mems {
+        width: 420vw;
+    }
+    .slides {
+        width: 80vw;
+    }
+}
 @media (max-width: 375px) {
+  
     .text {
         font-size: 0.9rem;
     }
