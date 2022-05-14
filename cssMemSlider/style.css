@@ -1,9 +1,9 @@
+
+
 body {
     margin: 0;
     padding: 0;
     background: #e4f9f6;
-    max-height: 44rem;
-    overflow: hidden;
 }
 
 .wrapper-slide {
@@ -12,7 +12,7 @@ body {
     margin: 0 auto;
     overflow: hidden;
     border: dotted 1vw #2faea3;
-    height: auto;
+    max-height: 44rem;
 }
 
 input {
