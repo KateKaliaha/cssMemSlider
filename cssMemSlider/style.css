@@ -2,7 +2,7 @@ body {
     margin: 0;
     padding: 0;
     background: #e4f9f6;
-    height: 100vh;
+    max-height: 120rem;
     width: 100vw;
 }
 
@@ -12,7 +12,7 @@ body {
     margin: 0 auto;
     overflow: hidden;
     border: dotted 1vw #2faea3;
-    /* max-height: 80%; */
+    max-height: 80%;
     max-height: fit-content;
 }
 
@@ -23,7 +23,8 @@ input {
 .mems {
     display: flex;
     width: 300vw;
-    margin-bottom: 1vh;
+    margin-bottom: 2vh;
+    max-height: 45rem;
 }
 
 .slides {
@@ -38,7 +39,7 @@ input {
 img {
     object-fit: cover;
     width: 100%;
-    max-height: fit-content;
+    max-height: 40rem;
 }
 
 #slide-one:checked ~ .mems .slides {
@@ -155,12 +156,10 @@ img {
             }
             .mems {
                 width: 470vw;
+                max-height: 30rem;
             }
             .slides {
                 width: 80vw;
-            }
-            .slides img {
-                width: 90%;
             }
         }
 
