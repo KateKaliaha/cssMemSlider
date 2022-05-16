@@ -1,0 +1,236 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: #e4f9f6;
+    max-height: 120rem;
+    width: 100vw;
+}
+header {
+    margin-top: 2%;
+    height: 2%;
+}
+
+.wrapper-slide {
+    width: 50vw;
+    padding: 3vh;
+    margin: 0 auto;
+    overflow: hidden;
+    border: dotted 1vw #2faea3;
+    max-height: 80%;
+    max-height: fit-content;
+}
+
+input {
+    display: none;
+}
+
+.mems {
+    display: flex;
+    width: 300vw;
+    margin-bottom: 2vh;
+    max-height: 45rem;
+}
+
+.slides {
+    width: 50vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.7s ease-in-out;
+    margin-right: 1%;
+}
+
+img {
+    object-fit: cover;
+    width: 100%;
+    max-height: 40rem;
+}
+
+#slide-one:checked ~ .mems .slides {
+    transform: translateX(0%)
+}
+
+        #slide-two:checked ~ .mems .slides {    
+            transform: translateX(-106%)
+        }
+
+        #slide-three:checked ~ .mems .slides {
+            transform: translateX(-211.5%)
+        }
+
+        #slide-four:checked ~ .mems .slides {
+            transform: translateX(-318%)
+        }
+
+        #slide-five:checked ~ .mems .slides {
+            transform: translateX(-423%)
+        }
+
+        #slide-one:checked ~ .text-controls .wrapper-controls label:nth-child(1) .label-btn,
+        #slide-two:checked ~ .text-controls .wrapper-controls label:nth-child(2) .label-btn,
+        #slide-three:checked ~ .text-controls .wrapper-controls label:nth-child(3) .label-btn,
+        #slide-four:checked ~ .text-controls .wrapper-controls label:nth-child(4) .label-btn,
+        #slide-five:checked ~ .text-controls .wrapper-controls label:nth-child(5) .label-btn {
+            background: transparent;
+            border: solid 0.5vw #26655f;
+        }
+
+        .text-controls {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .wrapper-controls {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .wrapper-controls label {
+            width: 3vw;
+            height: 5vh;
+            display: flex;
+            cursor: pointer;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .label-btn {
+            width: 0.9vw;
+            height: 1.9999999vh;
+            border-radius: 50%;
+            margin-right: 10%;
+            background-color: #26655f;
+            border: solid 0.5vw #26655f;
+            
+        }
+
+        label:hover .label-btn {
+            background-color: #1e433f;
+            border: solid 0.5vw #1e433f;
+        } 
+
+        label:active .label-btn {
+            transform: scale(0.75);
+        background: transparent;
+        }
+
+        .wrapper-text {
+        height: 5vh;
+        overflow: hidden;
+        }
+
+        .text {
+            height: 5vh;
+            display: flex;
+            flex-wrap: nowrap;
+            width: auto;
+            transition: all 0.7s ease-in-out;
+            align-items: center;
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+
+        #slide-one:checked ~ .text-controls .wrapper-text .text {
+            transform: translateY(0%)
+        }
+
+        #slide-two:checked ~ .text-controls .wrapper-text .text {
+            transform: translateY(-100%)
+        }
+
+        #slide-three:checked ~ .text-controls .wrapper-text .text {
+            transform: translateY(-200%)
+        }
+
+        #slide-four:checked ~ .text-controls .wrapper-text .text {
+            transform: translateY(-300%)
+        }
+
+        #slide-five:checked ~ .text-controls .wrapper-text .text {
+            transform: translateY(-400%)
+        }
+
+        @media (max-width: 900px) {
+            .wrapper-slide {
+                padding: 1vh;
+            }
+            .text {
+                font-size: 1rem;
+            }
+            .wrapper-slide {
+                width: 80vw;
+            }
+            .mems {
+                width: 470vw;
+                max-height: 30rem;
+            }
+            .slides {
+                width: 80vw;
+            }
+        }
+
+        @media (max-width: 860px) {
+            .wrapper-slide {
+                width: 80vw;
+            }
+            .slides {
+                width: 80vw;
+            }
+            .text {
+                font-size: 1rem;
+            }
+    }
+        @media (max-width: 768px) {
+            .wrapper-slide {
+                padding: 1vh;
+            }
+            
+            .text-controls {
+                flex-direction: column-reverse;
+            }
+
+            .wrapper-text {
+                align-self: flex-start;
+            }
+
+            .wrapper-controls label {
+                height: 3vh;
+            }
+
+            .label-btn {
+                height: 1vh;
+            }
+            .slides img {
+                width: 100%;
+            }
+        }
+
+        @media (max-width: 530px) {
+            .wrapper-slide {
+                width: 85vw;
+            }
+            .mems {
+                width: 485vw;
+            }
+            .slides {
+                width: 85vw;
+            }
+        }
+
+        @media (max-width: 375px) {
+            .wrapper-slide {
+                width: 78vw;
+            }
+            .mems {
+                width: 417vw;
+            }
+            .slides {
+                width: 90vw;
+                margin-right: 1.1%;
+            }
+            .label-btn {
+                height: 1.5vh;
+                width: 2vh;
+            }
+        }
