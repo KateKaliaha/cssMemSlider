@@ -5,6 +5,10 @@ body {
     max-height: 120rem;
     width: 100vw;
 }
+header {
+    margin-top: 2%;
+    height: 2%;
+}
 
 .wrapper-slide {
     width: 50vw;
@@ -87,15 +91,18 @@ img {
             height: 5vh;
             display: flex;
             cursor: pointer;
+            justify-content: center;
+            align-items: center;
         }
 
         .label-btn {
-            width: 1vw;
-            height: 2.19999999vh;
+            width: 0.9vw;
+            height: 1.9999999vh;
             border-radius: 50%;
             margin-right: 10%;
             background-color: #26655f;
             border: solid 0.5vw #26655f;
+            
         }
 
         label:hover .label-btn {
